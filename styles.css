@@ -2,6 +2,7 @@
 :root { color-scheme:light dark; --bg:#f3fbff; --card:#ffffff; --ink:#102027; --muted:#3e5963; --line:#6c879155; --accent:#006c84; --highlight:#42cfff; --button:#9fe9ff; --panel:#d7eef7; --counter:#d0e4ff; --counter-ink:#001c36; --grid:#006c8412; }
 * { box-sizing:border-box; }
 [hidden] { display:none !important; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
 body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 Roboto,Arial,sans-serif; }
 a { color:var(--accent); text-underline-offset:.22em; }
 a:hover { text-decoration-thickness:2px; }

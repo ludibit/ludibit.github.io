@@ -33,7 +33,17 @@
       board.querySelector('.demo-top').append(reset);
     }
     const list = board.querySelector('.timer-list');
-    const status = board.querySelector('[role="status"]');
+    const footer = board.querySelector('.demo-status');
+    footer.textContent = 'Website demo only. Shows basic timer functionality.';
+    footer.removeAttribute('role');
+    footer.removeAttribute('aria-live');
+    // Keep action feedback available to assistive technology without changing
+    // the visible disclaimer, including when upgrading cached older HTML.
+    const status = document.createElement('span');
+    status.className = 'sr-only';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    board.append(status);
     const reset = board.querySelector('.board-reset');
     const specs = [
       { name: 'Focus', duration: 1500, remaining: 1500, counter: 0, running: true },
