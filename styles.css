@@ -12,7 +12,6 @@ button { cursor:pointer; }
 header { padding:1.5rem 0; border-bottom:1px solid var(--line); }
 nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
 .brand { display:inline-flex; align-items:center; gap:.65rem; color:var(--ink); font-weight:900; text-decoration:none; font-size:1.8rem; letter-spacing:-.08em; }
-.brand::before { content:''; width:1.1em; height:1.1em; display:block; background:var(--highlight); border:1px solid var(--line); border-radius:50% 50% 15% 50%; box-shadow:3px 3px 0 #006c8430; transform:rotate(-15deg); }
 .links { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; font-size:.9rem; }
 .links a { color:var(--ink); }
 .links [aria-current=page] { text-decoration-thickness:3px; }
@@ -27,22 +26,23 @@ p { margin:.8rem 0; }
 .eyebrow::before { content:''; width:.6rem; height:.6rem; background:var(--highlight); border:1px solid var(--ink); border-radius:50%; }
 .intro { font-size:1.2rem; max-width:36rem; color:var(--muted); }
 .hero { display:grid; grid-template-columns:1.2fr 1fr; align-items:center; gap:3rem; padding-bottom:5rem; }
-.hero h1 em { font-style:normal; color:var(--accent); font-weight:700; letter-spacing:-.065em; }
+.hero h1 em,.studio-intro h1 em { font-style:normal; color:var(--accent); font-weight:700; letter-spacing:-.065em; }
 .button { display:inline-flex; align-items:center; justify-content:center; gap:1rem; border:1px solid var(--line); border-radius:99px; padding:.7rem 1.3rem; background:var(--button); color:var(--ink); font-weight:700; text-decoration:none; box-shadow:0 4px 16px #006c8415; margin:.8rem .3rem .8rem 0; }
 .button:hover { transform:translateY(-2px); }
-.workshop { position:relative; aspect-ratio:1; display:grid; place-items:center; background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px); background-size:24px 24px; border:1px solid var(--line); border-radius:50% 50% 4% 4%; }
-.workshop .instrument { width:75%; background:linear-gradient(120deg,#42cfff,#1f8bff,#0d5fdb); color:white; border:1px solid var(--line); border-radius:1.5rem; padding:1.5rem; box-shadow:0 18px 50px #006c8429; transform:rotate(-7deg); }
-.instrument-face { width:60%; margin:1rem auto; aspect-ratio:1; border:2px solid var(--line); border-radius:50%; display:grid; place-items:center; font:bold clamp(2rem,5vw,3.6rem)/1 Roboto,Arial,sans-serif; background:var(--card); color:var(--ink); }
-.instrument-label { display:flex; justify-content:space-between; font: .8rem 'Courier New',monospace; }
-.sticker { position:absolute; bottom:2rem; right:-.5rem; padding:.5rem .9rem; border:1px solid var(--line); background:var(--button); transform:rotate(7deg); font: .85rem 'Courier New',monospace; }
 .section-head { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:1rem; border-top:1px solid var(--line); padding-top:1.2rem; }
-.app-feature { display:grid; grid-template-columns:1fr 1.1fr; margin:2rem 0 5rem; border:1px solid var(--line); border-radius:1.5rem; background:var(--card); overflow:hidden; }
-.app-copy { padding:clamp(1.5rem,4vw,3rem); }
-.app-copy h2 { margin-top:1.5rem; }
-.app-art { display:grid; align-content:center; gap:.8rem; background:var(--panel); padding:2.5rem; border-left:1px solid var(--line); color:var(--ink); }
-.mini-timer { display:flex; justify-content:space-between; gap:1rem; align-items:center; padding:1rem; border:1px solid var(--line); border-radius:.8rem; background:var(--card); box-shadow:0 4px 15px #006c8415; }
-.mini-timer:nth-child(2) { transform:rotate(-3deg); background:var(--button); }
-.mini-timer strong { font:bold 1.6rem 'Courier New',monospace; }
+/* The studio directory is text-led. Product visuals must reflect the real app. */
+.studio-intro { padding:1rem 0 4.5rem; max-width:950px; }
+.studio-intro h1 { font-size:clamp(3rem,7.5vw,6rem); }
+.studio-intro .intro { max-width:43rem; }
+.section-head h2 { margin:0 0 .7rem; font-size:clamp(1.5rem,3vw,2rem); }
+.app-list { list-style:none; padding:0; margin:1.5rem 0 4.5rem; }
+.app-entry { display:grid; grid-template-columns:60px 1fr 60px; gap:1.5rem; padding:2.5rem 1.5rem; border-top:1px solid var(--line); border-bottom:1px solid var(--line); color:var(--ink); text-decoration:none; }
+.app-entry:hover { background:var(--panel); }
+.app-number { font:1rem 'Courier New',monospace; color:var(--muted); padding-top:.4rem; }
+.app-entry h3 { font-size:clamp(1.8rem,4vw,2.8rem); margin:.6rem 0; }
+.app-entry p { color:var(--muted); max-width:40rem; }
+.app-entry-link { display:inline-block; margin-top:.7rem; color:var(--accent); text-decoration:underline; text-underline-offset:.22em; }
+.app-entry-arrow { font-size:2rem; color:var(--accent); align-self:center; justify-self:end; }
 .contact { display:grid; grid-template-columns:1fr 1fr; gap:2rem; padding:2rem 0 1rem; border-top:1px solid var(--line); }
 .contact a { overflow-wrap:anywhere; }
 footer { padding:1.5rem 0 2.5rem; border-top:1px solid var(--line); font-size:.85rem; color:var(--muted); }
@@ -95,9 +95,10 @@ footer { padding:1.5rem 0 2.5rem; border-top:1px solid var(--line); font-size:.8
 .policy h2,.policy h3 { scroll-margin-top:24px; }
 @media(max-width:760px) {
  .hero { grid-template-columns:1fr; gap:2.5rem; padding-bottom:3.5rem; }
- .workshop { width:min(100%,400px); justify-self:center; }
- .app-feature,.contact { grid-template-columns:1fr; }
- .app-art { border-left:0; border-top:1px solid var(--line); padding:1.5rem; }
+ .contact { grid-template-columns:1fr; }
+ .app-entry { grid-template-columns:1fr 32px; padding:1.5rem .5rem; gap:1rem; }
+ .app-number { display:none; }
+ .studio-intro { padding-bottom:3rem; }
  .features { grid-template-columns:1fr; gap:1rem; }
  main { padding:2.5rem 0; }
  .timer-controls { grid-template-columns:36px 1fr 40px; padding:0 2px; gap:0; }
@@ -106,8 +107,6 @@ footer { padding:1.5rem 0 2.5rem; border-top:1px solid var(--line); font-size:.8
 }
 @media(prefers-color-scheme:dark) {
  :root { --bg:#071e28; --card:#0d2b37; --ink:#e3f4fa; --muted:#b6cbd4; --line:#879ca54d; --accent:#6fd3f3; --highlight:#42cfff; --button:#004d61; --panel:#183743; --counter:#11476f; --counter-ink:#d0e4ff; --grid:#6fd3f312; }
- .workshop .instrument { color:white; box-shadow:0 18px 50px #0004; }
- .instrument-face { background:#08212c; color:#b8f7ff; border-color:#6fd3f355; }
 }
 @media(prefers-reduced-motion:no-preference) { .button { transition:transform .15s; } .liquid-fill { transition:width .28s ease-out; } }
 @media print {
