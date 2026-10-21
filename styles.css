@@ -20,4 +20,19 @@ h3 { margin:0 0 .35rem; font-size:1rem; }
 p { margin:.7rem 0; }
 .features p, .note { color:var(--muted); }
 footer { padding:1.5rem 0 2.5rem; border-top:1px solid var(--line); font-size:.9rem; color:var(--muted); }
+.policy-width { max-width:760px; }
+.policy { overflow-wrap:anywhere; }
+.policy h1 { font-size:clamp(2rem,7vw,3rem); }
+.policy h2 { margin-top:2.2em; font-size:1.4rem; }
+.policy h3 { margin-top:1.8em; }
+.policy li { margin:.5em 0; }
+.policy ul { padding-left:1.4em; }
+.policy h2, .policy h3 { scroll-margin-top:24px; }
+@media print {
+  body { background:white; color:black; }
+  header, footer { display:none; }
+  .policy { width:100%; max-width:none; padding:0; }
+  .policy a { color:inherit; }
+  .policy h2, .policy h3 { break-after:avoid; }
+}
 @media(prefers-color-scheme:dark) { :root { --bg:#0e1727; --card:#152238; --ink:#edf2fc; --muted:#b6c5dc; --line:#30435f; --accent:#9bbfff; } }
