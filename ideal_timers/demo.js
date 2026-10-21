@@ -36,8 +36,8 @@
     const status = board.querySelector('[role="status"]');
     const reset = board.querySelector('.board-reset');
     const specs = [
-      { name: 'Focus', duration: 3600, remaining: 2311, counter: 293, running: true },
-      { name: 'Break', duration: 300, remaining: 180, counter: 3, running: false },
+      { name: 'Focus', duration: 3600, remaining: 2311, counter: 0, running: true },
+      { name: 'Break', duration: 300, remaining: 180, counter: 0, running: false },
     ];
     const models = [];
     let inView = true;
