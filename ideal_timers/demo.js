@@ -15,6 +15,23 @@
   const maxSeconds = 86399; // Matches drift_repository's maxTimerSeconds.
 
   document.querySelectorAll('[data-demo]').forEach((board, boardIndex) => {
+    // Pages/browser caches can briefly serve the previous HTML with this script.
+    // Upgrade that shell rather than failing before the controls are attached.
+    if (!board.querySelector('.timer-list')) {
+      board.querySelectorAll('.timer').forEach(card => card.remove());
+      const title = board.querySelector('.demo-title');
+      if (title) title.textContent = 'Your timer board';
+      board.querySelector('.demo-top .caption')?.remove();
+      const list = document.createElement('div');
+      list.className = 'timer-list';
+      board.querySelector('.demo-top').after(list);
+      const reset = document.createElement('button');
+      reset.type = 'button';
+      reset.className = 'board-reset';
+      reset.textContent = 'Reset demo';
+      reset.hidden = true;
+      board.querySelector('.demo-top').append(reset);
+    }
     const list = board.querySelector('.timer-list');
     const status = board.querySelector('[role="status"]');
     const reset = board.querySelector('.board-reset');
