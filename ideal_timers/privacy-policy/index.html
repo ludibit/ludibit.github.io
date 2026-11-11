@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Privacy policy for Ideal Timers by Ludibit, including local data, sync, ads, purchases and deletion.">
+  <meta name="description" content="Privacy policy for Ideal Timers by Ludibit, including local data, sync, ads, analytics, purchases and deletion.">
   <title>Ideal Timers Privacy Policy — Ludibit</title>
   <link rel="canonical" href="https://ludibit.github.io/ideal_timers/privacy-policy/">
   <link rel="stylesheet" href="../../styles.css?v=d5ea6af3157f">
@@ -16,7 +16,7 @@
   <main class="wrap policy-width policy" id="main">
 <h1 id="ludibit-privacy-policy">Ludibit Privacy Policy</h1>
 
-<p>Effective date: <strong>October 17, 2026</strong></p>
+<p>Effective date: <strong>November 6, 2026</strong></p>
 
 <p>This policy explains how <strong>Ideal Timers</strong>, developed by <strong>Ludibit</strong>, handles your information. Contact: <strong><a href="mailto:iamludibit@gmail.com">iamludibit@gmail.com</a></strong>.</p>
 
@@ -26,12 +26,13 @@
   <li>Ideal Timers stores your content locally. We do not run servers to store or sync it.</li>
   <li>You choose whether to sync or export backups, which devices to sync with and where to save or share exported files. Device backups follow your operating-system backup settings.</li>
   <li>AdMob processes advertising information. We do not send your timer content to AdMob.</li>
-  <li>Premium removes ads. Stores handle purchases.</li>
+  <li>On Android, Google Analytics measures installs and ad revenue so we can see which creator links and ads work. It follows your consent choices and never receives your timer content.</li>
+  <li>Android includes ads and has no in-app purchases. On Windows, Microsoft Store handles the paid app purchase.</li>
 </ul>
 
 <h2 id="your-local-data">Your local data</h2>
 
-<p>Ideal Timers requires no app account. It stores boards, timers, schedules, counters, history, notes, settings, keyboard shortcuts and selected wallpaper locally to provide its features. It also stores a random sync installation identifier and cached Premium status. Names and notes can contain personal information you enter. Timer content may appear in notifications and background controls according to your device settings.</p>
+<p>Ideal Timers requires no app account. It stores boards, timers, schedules, counters, history, notes, settings, keyboard shortcuts and selected wallpaper locally to provide its features. It also stores a random sync installation identifier and, on Windows, cached Microsoft Store license status. Names and notes can contain personal information you enter. Timer content may appear in notifications and background controls according to your device settings.</p>
 
 <p>Storage and sync of this content do not use a developer-hosted cloud service. The app does not request your name, email, contacts, precise GPS location, camera or microphone to run timers.</p>
 
@@ -49,15 +50,25 @@
 
 <p><strong>The app does not supply timers, notes, history, boards, settings, schedules, wallpaper, shortcuts, backups or other content created or saved through its features to AdMob.</strong> This is separate from SDK device, interaction and diagnostic information.</p>
 
-<p>The app checks Premium before explicitly initializing the advertising SDK or requesting ads. For non-Premium users, Google’s consent platform checks requirements, displays required forms and determines whether ads may be requested. When required, “Advertising privacy” in Settings lets you review your choices. Android also provides advertising-ID controls.</p>
-
-<p>Recognized Premium skips explicit ad initialization and ad requests at startup; unresolved purchase checks leave ads disabled. Upgrading removes ads and stops further requests, but does not unload an already initialized SDK or erase information already processed. Store checks can still occur.</p>
+<p>Before the app explicitly initializes the advertising SDK or requests ads, Google’s consent platform checks requirements, displays required forms and determines whether ads may be requested. When required, “Advertising privacy” in Settings lets you review your choices. Android also provides advertising-ID controls.</p>
 
 <p>See <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites">partner-services explanation</a> and <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">AdMob data disclosure</a>. This policy does not itself obtain consent.</p>
 
+<h2 id="android-analytics-and-promotion-measurement">Android analytics and promotion measurement</h2>
+
+<p>On Android, Ideal Timers uses Google Analytics for Firebase to understand how people find the app and whether our promotion works, for example which creator link or ad led to an install, and how much ad revenue the app earns. Google Analytics processes an app-instance identifier, the advertising ID, approximate location derived from a masked IP address, app launches and sessions, the Google Play campaign or link that led to the install, and ad revenue reported by AdMob.</p>
+
+<p><strong>The app does not send timers, notes, history, boards, settings, schedules, wallpaper, shortcuts, backups or other content created or saved through its features to Google Analytics, and it logs no custom events.</strong></p>
+
+<p>Analytics stays off until the app has checked your privacy choices. Where Google’s consent platform asks for consent, for example in the European Economic Area, the UK and Switzerland, analytics runs only if you allow Google to store information on your device and measure advertising performance; otherwise it stays off. When required, “Advertising privacy” in Settings lets you change your choices. Ad personalization from this data is always disabled, and we do not build remarketing audiences.</p>
+
+<p>We link Google Analytics with Google Play, Google AdMob and Google Ads only to report installs, ad revenue and the results of our own campaigns. Google processes this data under its terms for these services, and we have turned off optional sharing of Analytics data for Google’s own purposes. Analytics event data is kept for 14 months and then deleted automatically. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
+
+<p>On Windows, the app contains no analytics. If you install or buy through a Microsoft Store promotional link, Microsoft may report to us how many installs and purchases that link produced.</p>
+
 <h2 id="purchases">Purchases</h2>
 
-<p>Google Play handles Android purchases; supported Microsoft Store installations use Microsoft Store services. Stores process payments and provide purchase records to recognize, acknowledge and restore Premium. The app caches entitlement status locally and does not receive full payment-card details. See <a href="https://policies.google.com/privacy">Google’s policy</a> and <a href="https://privacy.microsoft.com/privacystatement">Microsoft’s policy</a>.</p>
+<p>The Android app has no in-app purchases. Microsoft Store handles the paid Windows app purchase; the Windows app has no additional in-app purchase. Microsoft Store processes payment and provides app-license status used to recognize ownership, and Windows uses the Store’s license information and offline cache. We do not receive full payment-card details. See <a href="https://privacy.microsoft.com/privacystatement">Microsoft’s policy</a>.</p>
 
 <h2 id="retention-and-deletion">Retention and deletion</h2>
 
@@ -65,13 +76,15 @@
 
 <p>“Reset all data” resets the database. It does not remove every separate file, including saved sync devices/versions, wallpaper, shortcut preferences and exported backups. Remove saved devices and wallpaper through their controls. On Android, clearing app storage removes app-private data; uninstalling generally does too, but system backups may restore it. Desktop uninstalling may leave the data directory. Delete exports, backups and copies elsewhere separately.</p>
 
+<p>On Android, you can ask us to delete the Google Analytics data linked to your installation: open Settings &gt; Advanced &gt; “Delete analytics data” and send the anonymous ID shown there to <strong><a href="mailto:iamludibit@gmail.com">iamludibit@gmail.com</a></strong>. We request deletion of that ID’s data from Google Analytics within 30 days and confirm by email; Google may need additional time to complete removal from its systems. If no ID is shown, no analytics data has been collected on that device. Advertising data is processed by Google under its own policies; you can reset or delete your advertising ID in Android settings.</p>
+
 <p>Resetting does not cancel purchases or erase third-party records. Google, Microsoft and backup/sharing providers retain information under their own policies.</p>
 
 <h2 id="support-diagnostics-and-security">Support, diagnostics and security</h2>
 
 <p>Emails and attachments you send are used to respond and kept without a fixed automatic deletion period. Request deletion at <strong><a href="mailto:iamludibit@gmail.com">iamludibit@gmail.com</a></strong> and we will delete the requested correspondence from our mailbox. Your copies and email-provider backups follow their own retention practices.</p>
 
-<p>There is no separate developer-operated analytics or automatic crash-upload service. Diagnostic builds may keep local logs; errors and state changes may appear in system/developer logs. Review logs before sharing. Local databases and exports are not encrypted by the app; device security and your chosen destinations affect protection.</p>
+<p>Apart from Google Analytics on Android, described above, there is no developer-operated analytics or automatic crash-upload service. Diagnostic builds may keep local logs; errors and state changes may appear in system/developer logs. Review logs before sharing. Local databases and exports are not encrypted by the app; device security and your chosen destinations affect protection.</p>
 
 <h2 id="audience-website-and-updates">Audience, website and updates</h2>
 
